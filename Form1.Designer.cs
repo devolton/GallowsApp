@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             mainPictureBox = new PictureBox();
             currentWordPanel = new Panel();
             scoreMainLabel = new Label();
@@ -124,6 +125,7 @@
             Controls.Add(scoreMainLabel);
             Controls.Add(currentWordPanel);
             Controls.Add(mainPictureBox);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;

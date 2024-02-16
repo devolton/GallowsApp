@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameOverForm));
             statusLabel = new Label();
             playAgainButton = new Button();
             exitButton = new Button();
@@ -83,6 +84,7 @@
             Controls.Add(exitButton);
             Controls.Add(playAgainButton);
             Controls.Add(statusLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "GameOverForm";

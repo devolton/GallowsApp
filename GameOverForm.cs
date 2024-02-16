@@ -53,8 +53,8 @@ namespace GallowsApp
 
         private void GameOverForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(!_isPlayAgainButtonClick)
-            _mainForm.Close();
+            if (!_isPlayAgainButtonClick)
+                _mainForm.Close();
         }
     }
 }

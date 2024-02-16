@@ -71,8 +71,8 @@ namespace GallowsApp
                     computerScoreLabel.Text = (++newComputerScore).ToString();
                     new GameOverForm(this, false).ShowDialog();
                 }
-                
-                   
+
+
             }
         }
 
@@ -80,7 +80,7 @@ namespace GallowsApp
         private void Form1_Load(object sender, EventArgs e)
         {
             ChoiceRandomWorb();
-            MessageBox.Show(_currentChoiceWord);
+            //MessageBox.Show(_currentChoiceWord);
             DrawLabels();
 
         }
