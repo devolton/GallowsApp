@@ -7,7 +7,7 @@ public  class CharLabel :Label
         Text = "_";
         Font = new Font("Georgia", 26, FontStyle.Regular);
         ForeColor = Color.Black;
-        BackColor = Color.Tan;
+        BackColor = Color.White;
         Size = new Size(50, 50);
 
 

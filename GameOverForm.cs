@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,16 +15,19 @@ namespace GallowsApp
     {
         private Form1 _mainForm;
         private bool _isWin;
+        private bool _isPlayAgainButtonClick;
         public GameOverForm(Form1 mainForm, bool isWin)
         {
             InitializeComponent();
             _mainForm = mainForm;
             _isWin = isWin;
+            _isPlayAgainButtonClick = false;
         }
 
         private void playAgainButton_Click(object sender, EventArgs e)
         {
             _mainForm.UpdateGame();
+            _isPlayAgainButtonClick = true;
             Close();
         }
 
@@ -49,6 +53,7 @@ namespace GallowsApp
 
         private void GameOverForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if(!_isPlayAgainButtonClick)
             _mainForm.Close();
         }
     }
