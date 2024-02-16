@@ -28,43 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            mainPictureBox = new PictureBox();
+            currentWordPanel = new Panel();
+            ((System.ComponentModel.ISupportInitialize)mainPictureBox).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // mainPictureBox
             // 
-            pictureBox1.Location = new Point(29, 40);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(369, 369);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            mainPictureBox.Location = new Point(29, 21);
+            mainPictureBox.Name = "mainPictureBox";
+            mainPictureBox.Size = new Size(430, 421);
+            mainPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            mainPictureBox.TabIndex = 0;
+            mainPictureBox.TabStop = false;
             // 
-            // panel1
+            // currentWordPanel
             // 
-            panel1.Location = new Point(29, 454);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1047, 99);
-            panel1.TabIndex = 1;
+            currentWordPanel.BackColor = SystemColors.ButtonShadow;
+            currentWordPanel.Location = new Point(29, 467);
+            currentWordPanel.Name = "currentWordPanel";
+            currentWordPanel.Size = new Size(1047, 99);
+            currentWordPanel.TabIndex = 1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1105, 565);
-            Controls.Add(panel1);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(1105, 587);
+            Controls.Add(currentWordPanel);
+            Controls.Add(mainPictureBox);
+            MaximizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
             KeyDown += Form1_KeyDown;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mainPictureBox).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private Panel panel1;
+        private PictureBox mainPictureBox;
+        private Panel currentWordPanel;
     }
 }
